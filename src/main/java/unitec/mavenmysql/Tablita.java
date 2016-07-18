@@ -5,10 +5,11 @@
  */
 package unitec.mavenmysql;
 
-/**
- *
- * @author T-107
- */
+
 public class Tablita {
+    Integer id;
+    String nombre;
+    Float suelo;
+    
     
 }
