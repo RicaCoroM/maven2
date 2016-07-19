@@ -7,9 +7,41 @@ package unitec.mavenmysql;
 
 
 public class Tablita {
-    Integer id;
-    String nombre;
-    Float suelo;
+    private Integer id;
+    private String nombre;
+    private Float sueldo;
+
+    public Tablita(String nombre, Float suelo) {
+        this.nombre = nombre;
+        this.sueldo = suelo;
+    }
+
+    public Tablita() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Float getSuelo() {
+        return sueldo;
+    }
+
+    public void setSuelo(Float suelo) {
+        this.sueldo = suelo;
+    }
     
     
 }
