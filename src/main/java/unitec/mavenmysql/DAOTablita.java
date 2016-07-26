@@ -18,4 +18,18 @@ public class DAOTablita {
         pr.execute();
         System.out.println("Objeto Tablita guardado con exito");
     }
+    public static Tablita buscarPorId(int id) throws Exception{
+        
+        Connection con = Conexion.conectarse("root", null);
+        Statement st = con.createStatement();
+        Tablita t=new Tablita();
+        ResultSet res = st.executeQuery("select * from tablita where id ="+id);
+         while(res.next()){
+             //a esto se le llama mapeo
+             t.setId(res.getInt("id"));
+             t.setNombre(res.getString("nombre"));
+             t.setSuelo(res.getFloat("sueldo"));
+         }   
+         return t;
+    }
 }
